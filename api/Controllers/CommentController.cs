@@ -54,5 +54,6 @@ namespace api.Controllers
             var commentModel = await _commentRepo.UpdateAsync(id, updateDto);
             if(commentModel == null) return NotFound();
             return Ok(commentModel.ToCommentDto());
+        }
     }
 }
